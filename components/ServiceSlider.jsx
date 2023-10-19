@@ -9,17 +9,6 @@ import {
   RxArrowTopRight,
 } from "react-icons/rx";
 
-//import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-//import swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-
-//import required modules
-import { FreeMode, Pagination } from "swiper";
-
 // data
 const serviceData = [
   {
@@ -48,6 +37,17 @@ const serviceData = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
+
+//import swiper react components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+//import swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+//import required modules
+import { FreeMode, Pagination } from "swiper";
 
 const ServiceSlider = () => {
   return (
