@@ -9,7 +9,7 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  basePath: LOCAL === "development" ? "" : "/portfolio-example",
+  basePath: "/portfolio-example",
 };
 
 module.exports = nextConfig;
