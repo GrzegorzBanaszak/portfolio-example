@@ -202,20 +202,19 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* icons */}
-                    {item.icons.lenght > 0 &&
-                      item.icons.map(
-                        (icon,
-                        (iconIndex) => {
-                          return (
-                            <div
-                              className="text-2xl text-white"
-                              key={iconIndex + itemIndex}
-                            >
-                              {icon}
-                            </div>
-                          );
-                        })
-                      )}
+                    {/* {item.icons?.map(
+                      (icon,
+                      (iconIndex) => {
+                        return (
+                          <div
+                            className="text-2xl text-white"
+                            key={iconIndex + itemIndex}
+                          >
+                            {icon}
+                          </div>
+                        );
+                      })
+                    )} */}
                   </div>
                 </div>
               );
