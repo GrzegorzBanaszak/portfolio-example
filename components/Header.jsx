@@ -16,7 +16,7 @@ const Header = () => {
               width={220}
               height={48}
               alt=""
-              property={true}
+              property={"true"}
             />
           </Link>
           <Socials />
