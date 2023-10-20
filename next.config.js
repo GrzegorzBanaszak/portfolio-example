@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const { LOCAL } = process.env;
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -7,6 +9,7 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  basePath: LOCAL === "development" ? "" : "/portfolio-example",
 };
 
 module.exports = nextConfig;
