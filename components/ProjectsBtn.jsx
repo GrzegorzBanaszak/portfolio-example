@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import nextConfig from "../next.config";
 //icons
 
 import { HiArrowRight } from "react-icons/hi2";
@@ -9,11 +9,11 @@ const ProjectsBtn = () => {
   return (
     <div className="mx-auto xl:mx-0">
       <Link
-        href={"/work"}
+        href="/work"
         className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group"
       >
         <Image
-          src={"/rounded-text.png"}
+          src={`${nextConfig.basePath}/rounded-text.png`}
           width={141}
           height={148}
           alt=""

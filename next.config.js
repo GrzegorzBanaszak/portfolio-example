@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
+
 const isProd = process.env.NODE_ENV === "production";
 
-const path = isProd ? "/portfolio-example" : "";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -10,8 +10,10 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  assetPrefix: isProd ? "/portfolio-example" : undefined,
-  basePath: path,
+  images: {
+    unoptimized: true,
+  },
+  basePath: isProd ? "/portfolio-example" : "",
 };
 
 module.exports = nextConfig;

@@ -1,3 +1,4 @@
+"use client";
 // icons
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -17,6 +18,13 @@ import {
   SiAdobexd,
   SiAdobephotoshop,
 } from "react-icons/si";
+
+//counter
+import CountUp from "react-countup";
+
+//components
+import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
 
 //  data
 const aboutData = [
@@ -89,13 +97,6 @@ const aboutData = [
     ],
   },
 ];
-
-//counter
-import CountUp from "react-countup";
-
-//components
-import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -202,19 +203,16 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* icons */}
-                    {/* {item.icons?.map(
-                      (icon,
-                      (iconIndex) => {
-                        return (
-                          <div
-                            className="text-2xl text-white"
-                            key={iconIndex + itemIndex}
-                          >
-                            {icon}
-                          </div>
-                        );
-                      })
-                    )} */}
+                    {item.icons?.map((icon, iconIndex) => {
+                      return (
+                        <div
+                          key={iconIndex + itemIndex}
+                          className="text-2xl text-white"
+                        >
+                          {icon}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               );

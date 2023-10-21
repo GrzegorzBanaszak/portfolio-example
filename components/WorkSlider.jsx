@@ -1,3 +1,18 @@
+import nextConfig from "../next.config";
+// icons
+import { BsArrowRight } from "react-icons/bs";
+
+//import swiper react components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+//import swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+//import required modules
+import { Pagination } from "swiper";
+import Image from "next/image";
+
 // data
 const workSlides = {
   slides: [
@@ -44,20 +59,6 @@ const workSlides = {
   ],
 };
 
-// icons
-import { BsArrowRight } from "react-icons/bs";
-
-//import swiper react components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-//import swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-//import required modules
-import { Pagination } from "swiper";
-import Image from "next/image";
-
 const WorkSlider = () => {
   return (
     <Swiper
@@ -84,7 +85,12 @@ const WorkSlider = () => {
                   >
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       {/* image */}
-                      <Image src={image.path} width={500} height={300} alt="" />
+                      <Image
+                        src={nextConfig.basePath + image.path}
+                        width={500}
+                        height={300}
+                        alt=""
+                      />
                       {/* gradient */}
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">

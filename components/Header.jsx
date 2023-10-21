@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import nextConfig from "../next.config";
 
 //components
 import Socials from "../components/Socials";
@@ -11,7 +12,12 @@ const Header = () => {
         <div className="flex flex-col xl:flex-row justify-between items-center gap-y-6 py-8">
           {/* Logo */}
           <Link href={"/"}>
-            <Image src={"/logo.svg"} width={220} height={48} alt="" />
+            <Image
+              src={`${nextConfig.basePath}/logo.svg`}
+              width={220}
+              height={48}
+              alt=""
+            />
           </Link>
           <Socials />
         </div>

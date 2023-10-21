@@ -1,10 +1,11 @@
 import Image from "next/image";
+import nextConfig from "../next.config";
 
 const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none">
       <Image
-        src={"/avatar.png"}
+        src={`${nextConfig.basePath}/avatar.png`}
         width={737}
         height={678}
         alt="Avatar"
